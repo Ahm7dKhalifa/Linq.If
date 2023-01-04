@@ -1,0 +1,12 @@
+E:\My\Linq.If\Linq.If.Sample\Linq.If\bin\Debug\net5.0\Linq.If.deps.json
+E:\My\Linq.If\Linq.If.Sample\Linq.If\bin\Debug\net5.0\Linq.If.dll
+E:\My\Linq.If\Linq.If.Sample\Linq.If\bin\Debug\net5.0\ref\Linq.If.dll
+E:\My\Linq.If\Linq.If.Sample\Linq.If\bin\Debug\net5.0\Linq.If.pdb
+E:\My\Linq.If\Linq.If.Sample\Linq.If\obj\Debug\net5.0\Linq.If.csproj.AssemblyReference.cache
+E:\My\Linq.If\Linq.If.Sample\Linq.If\obj\Debug\net5.0\Linq.If.GeneratedMSBuildEditorConfig.editorconfig
+E:\My\Linq.If\Linq.If.Sample\Linq.If\obj\Debug\net5.0\Linq.If.AssemblyInfoInputs.cache
+E:\My\Linq.If\Linq.If.Sample\Linq.If\obj\Debug\net5.0\Linq.If.AssemblyInfo.cs
+E:\My\Linq.If\Linq.If.Sample\Linq.If\obj\Debug\net5.0\Linq.If.csproj.CoreCompileInputs.cache
+E:\My\Linq.If\Linq.If.Sample\Linq.If\obj\Debug\net5.0\Linq.If.dll
+E:\My\Linq.If\Linq.If.Sample\Linq.If\obj\Debug\net5.0\ref\Linq.If.dll
+E:\My\Linq.If\Linq.If.Sample\Linq.If\obj\Debug\net5.0\Linq.If.pdb
