@@ -11,10 +11,7 @@ namespace Linq.If
     {
         public static IQueryable<TSource> WhereIf<TSource>(this IQueryable<TSource> query, bool condition, Expression<Func<TSource, bool>> predicate)
         {
-            if (condition == true)
-                return query.Where(predicate);
-            else
-                return query;
+          return  condition? query.Where(predicate): query;
         }
     }
 }
