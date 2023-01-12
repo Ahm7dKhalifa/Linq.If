@@ -10,19 +10,21 @@ namespace Linq.If.Sample
 {
     public class DatabaseContext : DbContext
     {
+        public bool UsingInMemoryDatabase { get; set; } = false;
         public DatabaseContext()
         {
 
         }
-
+        public DatabaseContext(DbContextOptions<DatabaseContext> options,bool usingInMemoryDatabase) :base(options) { UsingInMemoryDatabase = usingInMemoryDatabase; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=LinqIfSample;Trusted_Connection=True;");
+            if (!UsingInMemoryDatabase)
+            {
+                optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=LinqIfSample;Trusted_Connection=True;");
+            }
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-        }
+       
 
         public DbSet<Product> Products { get; set; }
 

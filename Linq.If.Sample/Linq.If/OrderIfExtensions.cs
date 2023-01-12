@@ -8,36 +8,31 @@ namespace Linq.If
     {
         public static IOrderedQueryable<TSource> OrderByIf<TSource, TKey>(this IQueryable<TSource> query, bool condition, Expression<Func<TSource, TKey>> orderByExpression)
         {
-            if (condition == true)
-                return query.OrderBy(orderByExpression);
-            else
-                return (IOrderedQueryable<TSource>)query;
+           return condition ? query.OrderBy(orderByExpression):query.OrderBy(i=>0);
         }
-
+        public static IOrderedQueryable<TSource> OrderByIf<TSource, TKey>(this IOrderedQueryable<TSource> query, bool condition, Expression<Func<TSource, TKey>> orderByExpression)
+        {
+          return condition ? query.OrderBy(orderByExpression):query;
+        }
 
         public static IOrderedQueryable<TSource> OrderByDescendingIf<TSource, TKey>(this IQueryable<TSource> query, bool condition, Expression<Func<TSource, TKey>> orderByExpression)
         {
-            if (condition == true)
-                return query.OrderByDescending(orderByExpression);
-            else
-                return (IOrderedQueryable<TSource>)query;
+          return  condition? query.OrderByDescending(orderByExpression):
+                query.OrderByDescending(i=>0);
         }
-
+        public static IOrderedQueryable<TSource> OrderByDescendingIf<TSource, TKey>(this IOrderedQueryable<TSource> query, bool condition, Expression<Func<TSource, TKey>> orderByExpression)
+        {
+           return condition ? query.OrderByDescending(orderByExpression): query;
+        }
         public static IOrderedQueryable<TSource> ThenByIf<TSource, TKey>(this IOrderedQueryable<TSource> query, bool condition, Expression<Func<TSource, TKey>> orderByExpression)
         {
-            if (condition == true)
-                return query.ThenBy(orderByExpression);
-            else
-                return query;
+            return condition ? query.ThenBy(orderByExpression) : query;
         }
 
 
         public static IOrderedQueryable<TSource> ThenByDescendingIf<TSource, TKey>(this IOrderedQueryable<TSource> query, bool condition, Expression<Func<TSource, TKey>> orderByExpression)
         {
-            if (condition == true)
-                return query.ThenByDescending(orderByExpression);
-            else
-                return query;
+            return condition ? query.ThenByDescending(orderByExpression) : query;
         }
     }
 }
